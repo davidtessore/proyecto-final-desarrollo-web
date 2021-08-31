@@ -1,0 +1,91 @@
+.sectionArticulo {
+    &__list {
+        display: grid;
+        grid-template-rows: auto;
+    }
+
+    &__item {
+        list-style: none;
+        transition: $tiempoAnimacion;
+        @include subContent (grid, 100%, center);
+    }
+
+    &__item:hover {
+        border-radius: $bordesForm;
+        background-color: $sombreado;
+    }
+
+    &__link {
+        grid-area: img;
+        text-decoration: none;
+        margin: 2%;
+    }
+
+    &__img {
+        border-radius: $bordesImagenes;
+        @include dimensiones (100%, 100%);
+    }
+
+    &__parrafo {
+        grid-area: parrafo;
+        text-align: center;
+        margin: 2%;
+        color: $colorParrafo;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .sectionArticulo {
+        &__list {
+            grid-template-columns: 100%;
+        }
+
+        &__item {
+            grid-template-columns: 100%;
+            grid-template-rows: 90% 10%;
+            grid-template-areas:
+            "img"
+            "parrafo";
+        }
+
+        &__parrafo {
+            font-size: $parrafoChico;
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .sectionArticulo {
+        &__list {
+            grid-template-columns: 100%;
+        }
+
+        &__item {
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 100%;
+            grid-template-areas: "img parrafo";
+        }
+
+        &__parrafo {
+            font-size: $parrafoMediano;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sectionArticulo {
+        &__list {
+            grid-template-columns: 50% 50%;
+        }
+
+        &__item {
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 100%;
+            grid-template-areas: "img parrafo";
+        }
+
+        &__parrafo {
+            font-size: $parrafoGrande;
+        }
+    }
+}

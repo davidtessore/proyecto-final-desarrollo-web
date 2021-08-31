@@ -1,0 +1,160 @@
+.mainHome {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "titulo"
+    "contenido";
+    justify-items: center;
+
+    &__title_1 {
+        text-align: center;
+        color: $colorTitulos;
+        @include marginTitle (5%, 5%);
+    }
+
+    &__container {
+        display: grid;
+        grid-template-rows: auto;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        transition: $tiempoAnimacion;
+    }
+
+    &__section:hover {
+        background-color: $sombreado;
+        border-radius: $bordesSombreado;
+    }
+
+    &__title_2 {
+        color: $colorTitulos;
+        text-align: center;
+        @include marginTitle (5%, 5%);
+    }
+
+    &__content {
+        width: 75%;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $colorTitulos;
+    }
+
+    &__link:hover {
+        color: $colorHiperVinculo;
+    }
+
+    &__parrafo {
+        color: $colorParrafo;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: $bordesImagenes;
+    }
+}
+
+.slider {
+    width: 45%;
+    overflow: hidden;
+    margin-bottom: 5%;
+
+    li {
+        list-style: none;
+        width: 100%;
+    }
+
+    &__container {
+        padding: 0;
+        display: flex;
+        width: 500%;
+        animation: slider 30s infinite alternate linear;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: $bordesImagenes;
+    }
+
+    @keyframes slider {
+        0% {margin-left: 0%;}
+        18% {margin-left: 0%;}
+        22% {margin-left: -100%;}
+        38% {margin-left: -100%;}
+        42% {margin-left: -200%;}
+        58% {margin-left: -200%;}
+        62% {margin-left: -300%;}
+        78% {margin-left: -300%;}
+        82% {margin-left: -400%;}
+        100% {margin-left: -400%;}
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .mainHome {
+        &__title_1 {
+            font-size: $tituloChico;
+        }
+
+        &__container {
+            grid-template-columns: 100%;
+        }
+
+        &__title_2 {
+            font-size: $subTituloChico;
+        }
+
+        &__parrafo {
+            font-size: $parrafoChico;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .mainHome {
+        &__title_1 {
+            font-size: $tituloMediano;
+            width: 80%;
+        }
+
+        &__title_2 {
+            font-size: $subTituloMediano;
+            width: 80%;
+        }
+
+        &__parrafo {
+            font-size: $parrafoMediano;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mainHome {
+        &__title_1 {
+            font-size: $tituloGrande;
+            width: 75%;
+        }
+
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__title_2 {
+            font-size: $subTituloGrande;
+            width: 75%;
+        }
+
+        &__parrafo {
+            font-size: $parrafoGrande;
+        }
+    }
+}
