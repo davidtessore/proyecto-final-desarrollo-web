@@ -27,6 +27,7 @@
         margin: 5px;
         transition: $tiempoAnimacion;
         border-radius: $bordesImagenes;
+        border: solid 1px $fondoGeneral;
     }
 
     &__img:hover {

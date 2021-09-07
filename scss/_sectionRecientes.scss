@@ -5,6 +5,7 @@
 
     div:hover {
         background-color: $sombreado;
+        border: solid 1px $colorHiperVinculo;
         border-radius: $bordesSombreado;
     }
 
@@ -30,18 +31,24 @@
     &__content_1 {
         grid-area: vertical;
         grid-template-columns: 100%;
+        margin: 1%;
+        border: solid 1px $fondoGeneral;
         transition: $tiempoAnimacion;
         @include subContent (grid, auto, center);
     }
 
     &__content_2 {
         grid-area: horizontal_1;
+        margin: 0.5%;
+        border: solid 1px $fondoGeneral;
         transition: $tiempoAnimacion;
         @include subContent (grid, auto, center);
     }
 
     &__content_3 {
         grid-area: horizontal_2;
+        margin: 0.5%;
+        border: solid 1px $fondoGeneral;
         transition: $tiempoAnimacion;
         @include subContent (grid, auto, center);
     }

@@ -1,7 +1,6 @@
 .footer {
     display: block;
     background-image: $fondoNavFooter;
-    @include bordesTop(5px, 5px);
 
     li {
         list-style: none;
@@ -12,8 +11,7 @@
 
     li:hover {
         background-color: $sombreado;
-        border-left: $colorBordesBotones;
-        border-right: $colorBordesBotones;
+        box-shadow: $colorBordesBotones;
     }
 
     &__container_1 {

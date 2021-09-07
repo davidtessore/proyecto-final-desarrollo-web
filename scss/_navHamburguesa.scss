@@ -1,6 +1,5 @@
 .menuB {
     background-image: $fondoNavFooter;
-    border-radius: $bordesBotones;
 
     #boton:checked ~ .menuD {
         display: block;
@@ -30,6 +29,7 @@
     }
 
     &__img:hover {
+        box-shadow: $colorBordesBotones;
         background-color: $sombreado;
     }
 }
@@ -46,8 +46,8 @@
         flex-direction: row;
         list-style: none;
         position: relative;
-        margin-left: 2px;
-        margin-right: 2px;
+        margin-left: 1px;
+        margin-right: 1px;
         padding: $paddingBotones;
         transition: $tiempoAnimacion;
         border-radius: $bordesBotones;
@@ -56,8 +56,7 @@
     li:hover {
         justify-content: center;
         background-color: $sombreado;
-        border-left: $colorBordesBotones;
-        border-right: $colorBordesBotones;
+        box-shadow: $colorBordesBotones;
     }
 
     a {
@@ -79,21 +78,6 @@
     &__list_1:hover > ul {
         display: flex;
         flex-direction: column;
-    }
-
-    &__img {
-        transition: $tiempoAnimacion;
-        @include dimensiones (20px, 14px);
-    }
-
-    li:hover > a > img {
-        transform: rotate(180deg);
-    }
-
-    &__container_2 {
-        display: none;
-        position:absolute;
-        @include ubicacion(-200%, 100%, 100%);
     }
 }
 
@@ -119,22 +103,8 @@
         }
 
         li:hover {
-            background-color: $sombreado;
             justify-content: center;
-        }
-
-        &__img {
-            transform: rotate(90deg);
-        }
-
-        li:hover > a > img {
-            transform: rotate(270deg);
-        }
-        
-        &__container_2 {
-            background-image: $fondoNavFooter;
-            @include bordesBottom(5px, 5px);
-            @include ubicacion(100%, 0%, 100%);
+            background-color: $sombreado;
         }
     }
 }

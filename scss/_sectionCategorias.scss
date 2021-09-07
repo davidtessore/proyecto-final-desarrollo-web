@@ -4,14 +4,14 @@
     align-items: center;
 
     &__title {
-        color: $colorTitulos;
         padding: 2%;
+        color: $colorTitulos;
     }
 
     &__subTitle {
-        color: $colorTitulos;
         text-align: center;
         padding: 1%;
+        color: $colorTitulos;
     }
 
     &__article {
@@ -48,9 +48,10 @@
     &__parrafo {
         grid-area: parrafo;
         text-align: center;
+        margin: 1%;
         color: $colorParrafo;
         font-size: $parrafoGrande;
-        margin: 1%;
+
     }
 
     &__parrafo:hover {
@@ -115,7 +116,7 @@
         }
 
         &__img {
-            width: 100%;
+            width: 90%;
         }
 
         &__parrafo {

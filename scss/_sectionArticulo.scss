@@ -6,11 +6,14 @@
 
     &__item {
         list-style: none;
+        margin: 0.5%;
+        border: solid 1px $fondoGeneral;
         transition: $tiempoAnimacion;
         @include subContent (grid, 100%, center);
     }
 
     &__item:hover {
+        border: solid 1px $colorHiperVinculo;
         border-radius: $bordesForm;
         background-color: $sombreado;
     }

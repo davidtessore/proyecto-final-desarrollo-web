@@ -23,12 +23,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        margin: 1%;
+        border: solid 1px $fondoGeneral;
         transition: $tiempoAnimacion;
     }
 
     &__section:hover {
         background-color: $sombreado;
+        border: solid 1px $colorHiperVinculo;
         border-radius: $bordesSombreado;
     }
 
