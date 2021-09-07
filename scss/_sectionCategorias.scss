@@ -1,0 +1,125 @@
+.categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        color: $colorTitulos;
+        padding: 2%;
+    }
+
+    &__subTitle {
+        color: $colorTitulos;
+        text-align: center;
+        padding: 1%;
+    }
+
+    &__article {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "img"
+        "parrafo";
+        align-items: center;
+        justify-items: center;
+        padding: 1%;
+        margin: 0.5%;
+        border: solid 1px $fondoGeneral;
+        transition: $tiempoAnimacion;
+    }
+
+    &__article:hover {
+        background-color: $sombreado;
+        border-radius: $bordesSombreado;
+        border: $colorBordesImagenes;
+    }
+
+    &__img {
+        grid-area: img;
+        width: 100%;
+        border-radius: $bordesImagenes;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__parrafo {
+        grid-area: parrafo;
+        text-align: center;
+        color: $colorParrafo;
+        font-size: $parrafoGrande;
+        margin: 1%;
+    }
+
+    &__parrafo:hover {
+        color: $colorHiperVinculo;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .categorias {
+        &__title {
+            font-size: $tituloChico;
+        }
+
+        &__subTitle {
+            font-size: $subTituloChico;
+        }
+
+        &__img {
+            width: 50%;
+        }
+
+        &__parrafo {
+            font-size: $parrafoChico;
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .categorias {
+        &__title {
+            font-size: $tituloMediano;
+        }
+
+        &__subTitle {
+            font-size: $subTituloMediano;
+        }
+
+        &__img {
+            width: 75%;
+        }
+
+        &__parrafo {
+            font-size: $parrafoMediano;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .categorias {
+        &__title {
+            font-size: $tituloGrande;
+        }
+
+        &__subTitle {
+            font-size: $subTituloGrande;
+        }
+
+        &__article {
+            grid-template-columns: 50% 50%;
+            grid-template-areas:
+            "img parrafo";
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__parrafo {
+            font-size: $parrafoGrande;
+        }
+    }
+}
